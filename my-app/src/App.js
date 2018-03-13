@@ -15,7 +15,7 @@ class App extends Component {
     }
 
     render() {
-        console.log(this.props.tracks);
+        console.log(this.props.filterTracks);
         return (
             <div>
                 <div>
