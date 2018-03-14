@@ -1,14 +1,8 @@
-const initialState = [
-  'My home playlist',
-  'My work playlist'  
-];
+const initialState = '';
 
-export default function playlist(state = initialState, action) {
-    if (action.type === 'ADD_PLAYLIST') {
-        return [
-            ...state,
-            action.payload
-        ]
+export default function lists(state = initialState, action) {
+    if (action.type === 'ADD_TRACK') {
+        return action.payload.name;
     }else if (action.type === 'DELETE_PLAYLIST') {
         return state;
     }

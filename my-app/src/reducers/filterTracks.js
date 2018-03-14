@@ -1,6 +1,8 @@
-export default function filterTracks(state = '', action) {
-    if (action === 'FIND_TRACK') {
+const initialState = '';
+
+export default function filterTracks(state = initialState, action) {
+    if (action.type === 'FIND_TRACK') {
         return action.payload;
-    }else
+    }
     return state;
 }
