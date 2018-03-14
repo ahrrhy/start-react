@@ -53,7 +53,7 @@ class App extends Component {
                                         </div>
                                         <div className="card-action">
                                             <p><Link to={`/tracks/${track.id}`}>
-                                               to Track
+                                                to Track
                                             </Link></p>
                                         </div>
                                     </div>

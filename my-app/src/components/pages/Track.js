@@ -1,25 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
-import Menu from '../elements/Menu';
+const Track = ({ track }) => <div>{track.name}</div>;
 
-class Track extends Component {
-
-    render() {
-        return (
-            <div>
-                <Menu />
-                <div className="container">
-                    Track
-                </div>
-            </div>
-        );
-    }
-}
-
-const mapStateToProps = (state, ownProps) => {
-    console.log(ownProps);
-    return {};
-};
+const mapStateToProps = (state, ownProps) => ({
+    track: state.tracks.find(track => track.id === Number(ownProps.track.id))
+});
 
 export default connect(mapStateToProps)(Track);

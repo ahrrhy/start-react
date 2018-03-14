@@ -1,7 +1,7 @@
 const initialState = [
     {
-        id: 2323,
-        name: 'Top'
+        id: 1324,
+        name: 'Some hit'
     }
 ];
 

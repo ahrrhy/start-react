@@ -4,32 +4,30 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
-import { Router, Route, Link } from 'react-router-dom';
-import { routerMiddleware } from 'react-router-redux';
-import { syncHistoryWithStore } from 'react-router-redux';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 
-import App from './components/pages/App';
 import './index.css';
-import reducer from './reducers';
+import App from './components/pages/App';
 import About from './components/pages/About';
 import Track from './components/pages/Track';
 
-const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
-const history = syncHistoryWithStore(createHistory(), store);
+import reducer from './reducers/index';
+const history = createHistory();
+const middleware = routerMiddleware(history);
 
-
-
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk, middleware)));
 
 ReactDOM.render(
     <Provider store={store}>
-        <Router history={history}>
+        <ConnectedRouter history={history}>
             <div>
-                <Route path='/' component={App}/>
-                <Route path='/about' component={About}/>
+                <Route exact path='/' component={App}/>
+                <Route exact path='/about' component={About}/>
                 <Route path='/tracks/:id' component={Track}/>
             </div>
-        </Router>
+        </ConnectedRouter>
     </Provider>,
     document.getElementById('root')
 );
