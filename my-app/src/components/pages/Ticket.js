@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
-class Track extends Component {
+class Ticket extends Component {
 
     render() {
         return (
-            <div>{this.props.track.name}</div>
-    );
+            <div>{this.props.ticket.name}</div>
+        );
     }
 }
 export default connect(
     (state, ownProps) => ({
-        track: state.tracks.find(track => track.id),
+        ticket: state.tickets.find(ticket => ticket.id),
         ownProps})
-)(Track);
+)(Ticket);

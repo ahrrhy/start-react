@@ -13,9 +13,9 @@ let mockApiData = [
     }
 ];
 
-export const getTracks = () =>dispatch => {
+export const getTickets = () =>dispatch => {
     setTimeout(() => {
         console.log('got tracks');
-        dispatch({ type: 'FETCH_TRACKS_SUCCESS', payload: mockApiData })
+        dispatch({ type: 'FETCH_TICKETS_SUCCESS', payload: mockApiData })
     }, 2000);
 };

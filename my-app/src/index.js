@@ -11,7 +11,7 @@ import createHistory from 'history/createBrowserHistory';
 import './index.css';
 import App from './components/pages/App';
 import About from './components/pages/About';
-import Track from './components/pages/Track';
+import Ticket from './components/pages/Ticket';
 
 import reducer from './reducers/index';
 const history = createHistory();
@@ -25,7 +25,7 @@ ReactDOM.render(
             <div>
                 <Route exact path='/' component={App}/>
                 <Route exact path='/about' component={About}/>
-                <Route path='/tracks/:id' component={Track}/>
+                <Route path='/tickets/:id' component={Ticket}/>
             </div>
         </ConnectedRouter>
     </Provider>,

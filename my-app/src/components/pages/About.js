@@ -7,7 +7,7 @@ class About extends Component {
             <div>
                 <Menu />
                 <div className="container">
-                    This is our cool music app
+                    <p>It is my first React JS application. I have to create a to-do list. Every ticket should be editable and has it's own page.</p>
                 </div>
             </div>
         );
