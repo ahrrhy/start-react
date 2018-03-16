@@ -2,16 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { getTickets } from '../../actions/tickets';
+import { getTickets } from '../../actions/getTickets';
 import Menu from '../elements/Menu';
+import AddTicketForm from '../elements/AddTicketForm';
 
 class App extends Component {
 
-    addTicket() {
-        console.log('addTicket', this.ticketInput.value);
-        this.props.onAddTicket(this.ticketInput.value);
-        this.ticketInput.value = '';
-    }
     findTicket() {
         console.log('findTicket', this.searchInput.value);
         this.props.onFindTicket(this.searchInput.value);
@@ -24,12 +20,7 @@ class App extends Component {
                 <Menu/>
                 <div  className="row">
                     <div className="col s6">
-                        <div className="row">
-                            <div className="input-field col s12">
-                                <input type="text" ref={(input) => { this.ticketInput = input }}/>
-                                <button className="waves-effect waves-light btn" onClick={this.addTicket.bind(this)}>Add ticket</button>
-                            </div>
-                        </div>
+                        <AddTicketForm/>
                         <div className="row">
                             <div className="input-field col s12">
                                 <input type="text" ref={(input) => { this.searchInput = input }}/>
@@ -73,13 +64,6 @@ export default connect(
         ownProps
     }),
     dispatch => ({
-        onAddTicket: (name) => {
-            const payload = {
-                id: Date.now().toString(),
-                name
-            };
-            dispatch({ type: 'ADD_TICKET', payload });
-        },
         onFindTicket: (name) => {
             console.log('name', name);
             dispatch({ type: 'FIND_TICKET', payload: name});
