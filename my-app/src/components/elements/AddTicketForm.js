@@ -28,7 +28,7 @@ class AddTicketForm extends Component {
                         </div>
                     </div>
                     <div className="input-field col s12">
-                        <button type="button" className="waves-effect waves-light btn btn-add" onClick={this.addTicket.bind(this)}>Add Ticket</button>
+                        <button type="button" className="waves-effect waves-light btn btn-add" onClick={ this.addTicket.bind(this) }>Add Ticket</button>
                     </div>
                 </form>
             </div>
@@ -46,7 +46,8 @@ export default connect(
             const payload = {
                 id: Date.now().toString(),
                 name: name,
-                description: description
+                description: description,
+                favorite: false
             };
             dispatch({ type: 'ADD_TICKET', payload });
         },
