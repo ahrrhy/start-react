@@ -1,18 +1,24 @@
-const initialState = [
-    {
-        id: 1324,
-        name: 'Some task'
-    }
-];
-
-export default function taskList(state = initialState, action) {
+export default function taskList(state = [], action) {
     if (action.type === 'ADD_TICKET') {
         return [
             ...state,
             action.payload
         ];
     } else if (action.type === 'FETCH_TICKETS_SUCCESS') {
-        return action.payload;
+        return [
+            ...action.payload
+        ];
+    } else if (action.type === 'MAKE_FAVORITE') {
+
+        return [
+            ...state,
+            action.payload
+        ]
+    } else if (action.type === 'DELETE_TICKET') {
+        console.log(action);
+        return [
+            ...state
+        ]
     }
     return state;
 }

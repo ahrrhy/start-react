@@ -1,15 +1,18 @@
 let mockApiData = [
     {
         id: 1,
-        name: 'Enter Sandman'
+        name: 'Enter Sandman',
+        description: 'test1'
     },
     {
         id: 2,
-        name: 'Dovakin'
+        name: 'Dovakin',
+        description: 'test2'
     },
     {
         id: 3,
-        name: 'Viva Las-Vegas'
+        name: 'Viva Las-Vegas',
+        description: 'test3'
     }
 ];
 
