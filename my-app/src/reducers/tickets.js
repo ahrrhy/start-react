@@ -10,13 +10,14 @@ export default function taskList(state = [], action) {
             action.payload
         ]
     } else if (action.type === 'MAKE_FAVORITE') {
+        console.log(action.payload);
         return [
-            action.payload
-        ]
+            ...state
+        ];
     } else if (action.type === 'DELETE_FAVORITE') {
         return [
-            action.payload
-        ]
+            ...state
+        ];
     } else if (action.type === 'DELETE_TICKET') {
         console.log(action.id);
         return state.filter(ticket => +ticket.id !== +action.id)

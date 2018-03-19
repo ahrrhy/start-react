@@ -41,10 +41,11 @@ class TicketElement extends Component {
                                 <Link to={`/tickets/${ticket.id}`}>
                                     Edit Ticket
                                 </Link>
-                                { ticket.isFavorite ? <span onClick={
-                                    this.makeNotFavorite.bind(this, ticket) }><i className="material-icons red">favorite</i></span>
+                                { ticket.favorite === false ? <span onClick={ this.makeFavorite.bind(this, ticket) }><i className="material-icons">favorite</i></span>
                                     :
-                                    <span onClick={ this.makeFavorite.bind(this, ticket) }><i className="material-icons">favorite</i></span>
+                                    <span onClick={
+                                        this.makeNotFavorite.bind(this, ticket) }><i className="material-icons red-text">favorite</i></span>
+
                                 }
                                 <span  onClick={ this.deleteTicket.bind(this, ticket.id) }><i className="material-icons">delete</i></span>
                             </div>
@@ -67,10 +68,7 @@ export default connect(
             dispatch({ type: 'MAKE_FAVORITE', payload });
         },
         onDeleteFavorite: (ticket) => {
-            const payload = {
-                ...ticket,
-                favorite: false
-            };
+            const payload = ticket.favorite = false;
             dispatch({ type: 'DELETE_FAVORITE', payload })
         },
         onDeleteTicket: (id) => {

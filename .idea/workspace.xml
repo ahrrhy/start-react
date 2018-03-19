@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e531befd-2ae0-4f50-8457-6b08f32174cf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/src/actions/getTickets.js" afterPath="$PROJECT_DIR$/my-app/src/actions/getTickets.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/src/components/elements/AddTicketForm.js" afterPath="$PROJECT_DIR$/my-app/src/components/elements/AddTicketForm.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/src/components/elements/TicketElement.js" afterPath="$PROJECT_DIR$/my-app/src/components/elements/TicketElement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/src/components/pages/App.js" afterPath="$PROJECT_DIR$/my-app/src/components/pages/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/src/index.css" afterPath="$PROJECT_DIR$/my-app/src/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/src/reducers/tickets.js" afterPath="$PROJECT_DIR$/my-app/src/reducers/tickets.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,7 +20,7 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-app/src/components/pages/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-245">
+            <state relative-caret-position="17">
               <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -37,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/my-app/src/components/elements/AddTicketForm.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="248">
-              <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+              <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -57,21 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tickets.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tickets.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-app/src/reducers/tickets.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            <state relative-caret-position="238">
+              <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TicketElement.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TicketElement.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-app/src/components/elements/TicketElement.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="65" column="28" lean-forward="false" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+            <state relative-caret-position="180">
+              <caret line="45" column="41" lean-forward="false" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="41" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -83,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/my-app/src/actions/getTickets.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+              <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -149,10 +145,10 @@
         <option value="$PROJECT_DIR$/my-app/src/components/elements/TicketCSS.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/pages/App.js" />
         <option value="$PROJECT_DIR$/my-app/src/index.css" />
-        <option value="$PROJECT_DIR$/my-app/src/reducers/tickets.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/elements/AddTicketForm.js" />
         <option value="$PROJECT_DIR$/my-app/src/actions/getTickets.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/elements/TicketElement.js" />
+        <option value="$PROJECT_DIR$/my-app/src/reducers/tickets.js" />
       </list>
     </option>
   </component>
@@ -231,8 +227,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,11 +295,12 @@
       <workItem from="1521279346948" duration="1379000" />
       <workItem from="1521316790465" duration="10703000" />
       <workItem from="1521377062520" duration="21051000" />
+      <workItem from="1521491333745" duration="4401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125812000" />
+    <option name="totallyTimeSpent" value="130213000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -502,7 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="126" lean-forward="false" selection-start-line="12" selection-start-column="126" selection-end-line="12" selection-end-column="126" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -534,7 +530,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/pages/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/elements/AddTicketForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -548,36 +571,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/index.css">
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/elements/TicketElement.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/reducers/tickets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/pages/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-245">
-          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/elements/AddTicketForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+        <state relative-caret-position="180">
+          <caret line="45" column="41" lean-forward="false" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="41" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -587,18 +584,16 @@
     <entry file="file://$PROJECT_DIR$/my-app/src/actions/getTickets.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/elements/TicketElement.js">
+    <entry file="file://$PROJECT_DIR$/my-app/src/reducers/tickets.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="65" column="28" lean-forward="false" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
