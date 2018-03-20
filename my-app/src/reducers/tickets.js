@@ -6,18 +6,28 @@ export default function taskList(state = [], action) {
         ];
     } else if (action.type === 'FETCH_TICKETS_SUCCESS') {
         return [
-            ...state,
-            action.payload
+            ...action.payload
         ]
     } else if (action.type === 'MAKE_FAVORITE') {
-        console.log(action.payload);
-        return [
-            ...state
-        ];
+        return state.map(ticket => {
+            if (+ticket.id === +action.payload.id) {
+                ticket = {
+                    ...action.payload
+                };
+                return ticket
+            }
+            return ticket;
+        });
     } else if (action.type === 'DELETE_FAVORITE') {
-        return [
-            ...state
-        ];
+        return state.map(ticket => {
+            if (+ticket.id === +action.payload.id) {
+                ticket = {
+                    ...action.payload
+                };
+                return ticket
+            }
+            return ticket;
+        });
     } else if (action.type === 'DELETE_TICKET') {
         console.log(action.id);
         return state.filter(ticket => +ticket.id !== +action.id)

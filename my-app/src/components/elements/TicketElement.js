@@ -64,11 +64,17 @@ export default connect(
     }),
     dispatch => ({
         onAddFavorite: (ticket) => {
-            const payload = ticket.favorite = true;
+            const payload = {
+                ...ticket,
+                favorite: true
+            };
             dispatch({ type: 'MAKE_FAVORITE', payload });
         },
         onDeleteFavorite: (ticket) => {
-            const payload = ticket.favorite = false;
+            const payload = {
+                ...ticket,
+                favorite: false
+            };
             dispatch({ type: 'DELETE_FAVORITE', payload })
         },
         onDeleteTicket: (id) => {

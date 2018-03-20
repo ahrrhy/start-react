@@ -9,7 +9,7 @@ let mockApiData = [
         id: 2,
         name: 'Dovakin',
         description: 'test2',
-        favorite: false
+        favorite: true
     },
     {
         id: 3,
