@@ -12,6 +12,7 @@ import './index.css';
 import App from './components/pages/App';
 import About from './components/pages/About';
 import Ticket from './components/pages/Ticket';
+import CreateTicket from './components/pages/CreateTicket';
 
 import reducer from './reducers/index';
 const history = createHistory();
@@ -26,6 +27,7 @@ ReactDOM.render(
                 <Route exact path='/' component={App}/>
                 <Route exact path='/about' component={About}/>
                 <Route path='/tickets/:id' component={Ticket}/>
+                <Route path='/createTicket' component={CreateTicket}/>
             </div>
         </ConnectedRouter>
     </Provider>,

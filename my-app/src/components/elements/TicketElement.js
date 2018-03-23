@@ -64,11 +64,23 @@ export default connect(
     }),
     dispatch => ({
         onAddFavorite: (ticket) => {
-            const payload = {
-                ...ticket,
-                favorite: true
+            const addFavorite = () => {
+                return dispatch => {
+                    return fetch('/addFavorite', {
+                        method: "POST",
+                        body: JSON.stringify({ticket: ticket}),
+                        headers: {'Content-Type': 'application/json'}
+                    }).then((response) => {
+                        if (response.status == 200) {
+                            console.log(ticket, 'this is answer from addFavorite');
+                            dispatch({ type: 'MAKE_FAVORITE', payload: ticket });
+                        } else {
+                            dispatch({ type: 'TICKET_ERROR', payload: "addTICKET error" })
+                        }
+                    });
+              }
             };
-            dispatch({ type: 'MAKE_FAVORITE', payload });
+            dispatch(addFavorite());
         },
         onDeleteFavorite: (ticket) => {
             const payload = {

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-
-import { getTickets } from '../../actions/getTickets';
 import Menu from '../elements/Menu';
 import AddTicketForm from '../elements/AddTicketForm';
 import TicketElement from '../elements/TicketElement';
@@ -15,7 +13,6 @@ class App extends Component {
                 <Menu/>
                 <div  className="row">
                     <div className="col s6">
-                        <AddTicketForm/>
                         <div className="row">
                             <div className="input-field col s12">
                                 <button className="waves-effect waves-light btn" onClick={this.props.onGetTickets}>Get ticket</button>
@@ -38,6 +35,27 @@ export default connect(
     }),
     dispatch => ({
         onGetTickets: () => {
+            const getTickets = () => {
+                return dispatch => {
+                    return fetch('/fetch', {
+                            method: "POST",
+                            headers: {'Content-Type': 'application/json'}
+                        })
+                        .then((response) => {
+                            if(response.status == 200){
+                                let fetchedTickets = [];
+                                response.json().then((tickets) => {
+                                    tickets.map((ticket) => {
+                                        fetchedTickets.push(ticket);
+                                    });
+                                    dispatch({ type: 'FETCH_TICKETS_SUCCESS', payload: fetchedTickets })
+                                });
+                            } else {
+                                dispatch({ type: 'TICKET_ERROR', payload: "getTickets error" })
+                            }
+                        });
+                }
+            };
             dispatch(getTickets());
         }
     })

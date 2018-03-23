@@ -1,0 +1,97 @@
+const express = require('express');
+const app = express();
+const path    = require("path");
+const bodyParser = require('body-parser');
+
+app.use(express.static('build'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+//MongoDB
+const MongoClient = require('mongodb').MongoClient,
+    assert = require('assert');
+// Connection URL
+const url = 'mongodb://localhost:27017';
+
+function connect(cb) {
+    MongoClient.connect(url, function(err, client) {
+        const db = client.db('todolist');
+        cb(db, client);
+    })
+}
+
+const insertDocuments = function(db, data, callback) {
+    // Get the documents collection
+    const collection = db.collection('tickets');
+    // Insert some documents
+    collection.insertOne(data, function(err, result) {
+        console.log(result, 'this is the result from insert');
+        callback(result);
+    });
+};
+
+function insert(res, data) {
+    connect(function (db, client) {
+        insertDocuments(db, data, function(result) {
+            client.close();
+            console.log(result, 'this is result');
+            res.send(result);
+        });
+    });
+}
+
+app.post('/insert', function(req, res) {
+    insert(res, req.body.ticket);
+});
+
+const findDocuments = function(db, callback) {
+    // Get the documents collection
+    const collection = db.collection('tickets');
+    // Find some documents
+    collection.find({}).toArray(function(err, docs) {
+        console.log(docs, 'checking result from findDocuments');
+        callback(docs);
+    });
+};
+
+const updateDocuments = function(db, id, data, callback) {
+    // Get the documents collection
+    const collection = db.collection('tickets');
+    // Insert some documents
+    collection.updateOne(id, data, function(err, result) {
+        console.log(result, 'this is the result from insert');
+        callback(result);
+    });
+};
+
+function update(res,id, data) {
+    connect(function (db, client) {
+        updateDocuments(db, id, data, function(result) {
+            client.close();
+            console.log(result, 'this is result');
+            res.send(result);
+        });
+    });
+}
+
+app.post('/addFavorite', function (req, res) {
+    console.log(req.body.ticket, 'this is request for update.connection');
+    console.log({_id: req.body.ticket._id});
+    update(res, {_id: req.body.ticket._id}, {favorite: true});
+});
+
+function find(res) {
+    connect(function (db, client) {
+        findDocuments(db, function(docs) {
+            client.close();
+            res.send(docs);
+        });
+    });
+}
+
+app.post('/fetch', function(req, res) {
+    find(res);
+});
+
+app.listen(8010);
+console.log('hello world');

@@ -4,7 +4,12 @@ import { connect } from 'react-redux';
 class AddTicketForm extends Component {
 
     addTicket() {
-        this.props.onAddTicket(this.ticketNameInput.value, this.ticketDescriptionInput.value);
+        let ticket = {
+            name: this.ticketNameInput.value,
+            description: this.ticketDescriptionInput.value,
+            favorite: false
+        };
+        this.props.onAddTicket(ticket);
         this.ticketNameInput.value = '';
         this.ticketDescriptionInput.value = '';
     }
@@ -42,14 +47,25 @@ export default connect(
         ownProps
     }),
     dispatch => ({
-        onAddTicket: (name, description) => {
-            const payload = {
-                id: Date.now().toString(),
-                name: name,
-                description: description,
-                favorite: false
+        onAddTicket: (ticket) => {
+            const addTickets = () => {
+                return dispatch => {
+                    return fetch('/insert', {
+                            method: "POST",
+                            body: JSON.stringify({ticket: ticket}),
+                            headers: {'Content-Type': 'application/json'}
+                        })
+                        .then((response) => {
+                            if(response.status == 200){
+                                console.log(ticket + 3443);
+                                dispatch({ type: 'ADD_TICKET', payload: ticket });
+                            } else {
+                                dispatch({ type: 'TICKET_ERROR', payload: "addTICKET error" })
+                            }
+                    });
+                }
             };
-            dispatch({ type: 'ADD_TICKET', payload });
+            dispatch(addTickets());
         },
     })
 )(AddTicketForm);

@@ -6,3 +6,6 @@ body {
 .red {
     color: #ff0000;
 }
+i.material-icons {
+    cursor: pointer;
+}

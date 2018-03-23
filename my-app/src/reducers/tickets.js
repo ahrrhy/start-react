@@ -4,13 +4,18 @@ export default function taskList(state = [], action) {
             ...state,
             action.payload
         ];
-    } else if (action.type === 'FETCH_TICKETS_SUCCESS') {
+    }
+    else if (action.type === 'TICKET_ERROR') {
+        return action.payload;
+    }
+    else if (action.type === 'FETCH_TICKETS_SUCCESS') {
         return [
             ...action.payload
         ]
-    } else if (action.type === 'MAKE_FAVORITE') {
+    }
+    else if (action.type === 'MAKE_FAVORITE') {
         return state.map(ticket => {
-            if (+ticket.id === +action.payload.id) {
+            if (ticket._id == action.payload._id) {
                 ticket = {
                     ...action.payload
                 };
@@ -18,9 +23,10 @@ export default function taskList(state = [], action) {
             }
             return ticket;
         });
-    } else if (action.type === 'DELETE_FAVORITE') {
+    }
+    else if (action.type === 'DELETE_FAVORITE') {
         return state.map(ticket => {
-            if (+ticket.id === +action.payload.id) {
+            if (ticket._id == action.payload._id) {
                 ticket = {
                     ...action.payload
                 };
@@ -28,9 +34,10 @@ export default function taskList(state = [], action) {
             }
             return ticket;
         });
-    } else if (action.type === 'DELETE_TICKET') {
+    }
+    else if (action.type === 'DELETE_TICKET') {
         console.log(action.id);
-        return state.filter(ticket => +ticket.id !== +action.id)
+        return state.filter(ticket => ticket._id != action._id)
     }
     return state;
 }
