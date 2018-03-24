@@ -26,7 +26,7 @@ ReactDOM.render(
             <div>
                 <Route exact path='/' component={App}/>
                 <Route exact path='/about' component={About}/>
-                <Route path='/tickets/:id' component={Ticket}/>
+                <Route path='/tickets/:_id' component={Ticket}/>
                 <Route path='/createTicket' component={CreateTicket}/>
             </div>
         </ConnectedRouter>

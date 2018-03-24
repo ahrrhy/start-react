@@ -15,7 +15,7 @@ export default function taskList(state = [], action) {
     }
     else if (action.type === 'MAKE_FAVORITE') {
         return state.map(ticket => {
-            if (ticket._id == action.payload._id) {
+            if (ticket._id === action.payload._id) {
                 ticket = {
                     ...action.payload
                 };
@@ -26,7 +26,7 @@ export default function taskList(state = [], action) {
     }
     else if (action.type === 'DELETE_FAVORITE') {
         return state.map(ticket => {
-            if (ticket._id == action.payload._id) {
+            if (ticket._id === action.payload._id) {
                 ticket = {
                     ...action.payload
                 };

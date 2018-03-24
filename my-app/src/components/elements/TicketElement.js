@@ -38,7 +38,7 @@ class TicketElement extends Component {
                                 <p>{ ticket.description }</p>
                             </div>
                             <div className="card-action">
-                                <Link to={`/tickets/${ticket.id}`}>
+                                <Link to={`/tickets/${ticket._id}`}>
                                     Edit Ticket
                                 </Link>
                                 { ticket.favorite === false ? <span onClick={ this.makeFavorite.bind(this, ticket) }><i className="material-icons">favorite</i></span>
@@ -47,7 +47,7 @@ class TicketElement extends Component {
                                         this.makeNotFavorite.bind(this, ticket) }><i className="material-icons red-text">favorite</i></span>
 
                                 }
-                                <span  onClick={ this.deleteTicket.bind(this, ticket.id) }><i className="material-icons">delete</i></span>
+                                <span  onClick={ this.deleteTicket.bind(this, ticket._id) }><i className="material-icons">delete</i></span>
                             </div>
                         </div>
                     </div>

@@ -20,7 +20,7 @@ class Ticket extends Component {
 export default connect(
     (state, ownProps) => ({
         ticket: state.tickets.find( (ticket) => {
-            return Number(ticket.id) === Number(ownProps.match.params.id);
+            return ticket._id === ownProps.match.params._id;
         })
     })
 )(Ticket);

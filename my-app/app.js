@@ -25,7 +25,7 @@ const insertDocuments = function(db, data, callback) {
     const collection = db.collection('tickets');
     // Insert some documents
     collection.insertOne(data, function(err, result) {
-        console.log(result, 'this is the result from insert');
+        //console.log(result, 'this is the result from insert');
         callback(result);
     });
 };
@@ -34,7 +34,7 @@ function insert(res, data) {
     connect(function (db, client) {
         insertDocuments(db, data, function(result) {
             client.close();
-            console.log(result, 'this is result');
+            // console.log(result, 'this is result');
             res.send(result);
         });
     });
@@ -49,7 +49,7 @@ const findDocuments = function(db, callback) {
     const collection = db.collection('tickets');
     // Find some documents
     collection.find({}).toArray(function(err, docs) {
-        console.log(docs, 'checking result from findDocuments');
+        //console.log(docs, 'checking result from findDocuments');
         callback(docs);
     });
 };
@@ -59,7 +59,7 @@ const updateDocuments = function(db, id, data, callback) {
     const collection = db.collection('tickets');
     // Insert some documents
     collection.updateOne(id, data, function(err, result) {
-        console.log(result, 'this is the result from insert');
+        //console.log(result, 'this is the result from insert');
         callback(result);
     });
 };
@@ -68,16 +68,27 @@ function update(res,id, data) {
     connect(function (db, client) {
         updateDocuments(db, id, data, function(result) {
             client.close();
-            console.log(result, 'this is result');
+            //console.log(result, 'this is result');
             res.send(result);
         });
     });
 }
 
 app.post('/addFavorite', function (req, res) {
-    console.log(req.body.ticket, 'this is request for update.connection');
-    console.log({_id: req.body.ticket._id});
-    update(res, {_id: req.body.ticket._id}, {favorite: true});
+    //console.log(req.body.ticket, 'this is request for update.connection');
+    // console.log({_id: req.body.ticket._id});
+    // update(res, {_id: "req.body.ticket._id"}, {$set: {favorite: true}});
+
+    MongoClient.connect(url, function(err, client) {
+        assert.equal(null, err);
+        const db = client.db('todolist');
+        const collection = db.collection('tickets');
+        console.log(db);
+        // console.log(collection);
+        // console.log({_id: req.body.ticket._id});
+        console.log(collection.find({}));
+        client.close();
+    });
 });
 
 function find(res) {
