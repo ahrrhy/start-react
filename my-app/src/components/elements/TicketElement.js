@@ -17,14 +17,9 @@ class TicketElement extends Component {
         this.props.onDeleteTicket(target);
     }
 
-    makeFavorite(target) {
+    toggleFavorite(target) {
         console.log(target);
-        this.props.onAddFavorite(target);
-    }
-
-    makeNotFavorite(target) {
-        console.log(target);
-        this.props.onDeleteFavorite(target);
+        this.props.onToggleFavorite(target);
     }
 
     render() {
@@ -41,10 +36,10 @@ class TicketElement extends Component {
                                 <Link to={`/tickets/${ticket._id}`}>
                                     Edit Ticket
                                 </Link>
-                                { ticket.favorite === false ? <span onClick={ this.makeFavorite.bind(this, ticket) }><i className="material-icons">favorite</i></span>
+                                { ticket.favorite === false ?
+                                    <span onClick={ this.toggleFavorite.bind(this, ticket) }><i className="material-icons">favorite</i></span>
                                     :
-                                    <span onClick={
-                                        this.makeNotFavorite.bind(this, ticket) }><i className="material-icons red-text">favorite</i></span>
+                                    <span onClick={ this.toggleFavorite.bind(this, ticket) }><i className="material-icons red-text">favorite</i></span>
 
                                 }
                                 <span  onClick={ this.deleteTicket.bind(this, ticket._id) }><i className="material-icons">delete</i></span>
@@ -63,31 +58,28 @@ export default connect(
         ownProps
     }),
     dispatch => ({
-        onAddFavorite: (ticket) => {
-            const addFavorite = () => {
+        onToggleFavorite: (ticket) => {
+            const toggleFavorite = () => {
                 return dispatch => {
-                    return fetch('/addFavorite', {
+                    return fetch('/favorite', {
                         method: "POST",
                         body: JSON.stringify({ticket: ticket}),
                         headers: {'Content-Type': 'application/json'}
                     }).then((response) => {
                         if (response.status == 200) {
-                            console.log(ticket, 'this is answer from addFavorite');
-                            dispatch({ type: 'MAKE_FAVORITE', payload: ticket });
+                            if (ticket.favorite === false) {
+                                ticket.favorite = true;
+                            } else {
+                                ticket.favorite = false;
+                            }
+                            dispatch({ type: 'TOGGLE_FAVORITE', payload: ticket });
                         } else {
                             dispatch({ type: 'TICKET_ERROR', payload: "addTICKET error" })
                         }
                     });
               }
             };
-            dispatch(addFavorite());
-        },
-        onDeleteFavorite: (ticket) => {
-            const payload = {
-                ...ticket,
-                favorite: false
-            };
-            dispatch({ type: 'DELETE_FAVORITE', payload })
+            dispatch(toggleFavorite());
         },
         onDeleteTicket: (id) => {
             dispatch({ type: 'DELETE_TICKET', id });

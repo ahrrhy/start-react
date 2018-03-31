@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const path    = require("path");
 const bodyParser = require('body-parser');
+const ObjectID = require('mongodb').ObjectID;
+
 
 app.use(express.static('build'));
 app.use(bodyParser.json());
@@ -59,7 +61,8 @@ const updateDocuments = function(db, id, data, callback) {
     const collection = db.collection('tickets');
     // Insert some documents
     collection.updateOne(id, data, function(err, result) {
-        //console.log(result, 'this is the result from insert');
+        //console.log(result, 'this is the result from updateDocuments');
+        //console.log('from updateDocuments');
         callback(result);
     });
 };
@@ -68,27 +71,18 @@ function update(res,id, data) {
     connect(function (db, client) {
         updateDocuments(db, id, data, function(result) {
             client.close();
-            //console.log(result, 'this is result');
+            //console.log(result, 'this is result from update');
             res.send(result);
         });
     });
 }
 
-app.post('/addFavorite', function (req, res) {
-    //console.log(req.body.ticket, 'this is request for update.connection');
+app.post('/favorite', function (req, res) {
+    // console.log(req.body.ticket, 'this is request for update.connection');
     // console.log({_id: req.body.ticket._id});
-    // update(res, {_id: "req.body.ticket._id"}, {$set: {favorite: true}});
-
-    MongoClient.connect(url, function(err, client) {
-        assert.equal(null, err);
-        const db = client.db('todolist');
-        const collection = db.collection('tickets');
-        console.log(db);
-        // console.log(collection);
-        // console.log({_id: req.body.ticket._id});
-        console.log(collection.find({}));
-        client.close();
-    });
+    let query = {_id: ObjectID(req.body.ticket._id)};
+    console.log(query);
+    update(res, query, {$set: {favorite: !req.body.ticket.favorite}});
 });
 
 function find(res) {
