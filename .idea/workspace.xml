@@ -2,42 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e531befd-2ae0-4f50-8457-6b08f32174cf" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/WiredTiger" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/WiredTiger.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/WiredTiger.turtle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/WiredTiger.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/WiredTigerLAS.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/collection-0--3276525875057545420.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/collection-2--3276525875057545420.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/collection-4--3276525875057545420.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/collection-6--3276525875057545420.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/db/journal/WiredTigerLog.0000000002" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/diagnostic.data/metrics.2018-03-22T07-06-49Z-00000" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/diagnostic.data/metrics.2018-03-23T11-40-24Z-00000" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/diagnostic.data/metrics.2018-03-23T19-52-51Z-00000" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/diagnostic.data/metrics.2018-03-24T20-02-43Z-00000" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/index-1--3276525875057545420.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/index-3--3276525875057545420.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/index-5--3276525875057545420.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/index-7--3276525875057545420.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/index-8--3276525875057545420.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/journal/WiredTigerLog.0000000004" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/journal/WiredTigerPreplog.0000000001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/journal/WiredTigerPreplog.0000000002" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/mongod.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/sizeStorer.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/storage.bson" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/_mdb_catalog.wt" afterPath="$PROJECT_DIR$/my-app/_mdb_catalog.wt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/my-app/db/journal/WiredTigerLog.0000000003" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/db/WiredTiger.wt" afterPath="$PROJECT_DIR$/my-app/db/WiredTiger.wt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/db/_mdb_catalog.wt" afterPath="$PROJECT_DIR$/my-app/db/_mdb_catalog.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/db/collection-0-2237249979573029142.wt" afterPath="$PROJECT_DIR$/my-app/db/collection-0-2237249979573029142.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/db/collection-2-2867088136229412576.wt" afterPath="$PROJECT_DIR$/my-app/db/collection-2-2867088136229412576.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/db/index-1-2237249979573029142.wt" afterPath="$PROJECT_DIR$/my-app/db/index-1-2237249979573029142.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/db/index-3-2867088136229412576.wt" afterPath="$PROJECT_DIR$/my-app/db/index-3-2867088136229412576.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/db/sizeStorer.wt" afterPath="$PROJECT_DIR$/my-app/db/sizeStorer.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/app.js" afterPath="$PROJECT_DIR$/my-app/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/db/WiredTiger.turtle" afterPath="$PROJECT_DIR$/my-app/db/WiredTiger.turtle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/src/components/elements/TicketElement.js" afterPath="$PROJECT_DIR$/my-app/src/components/elements/TicketElement.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/db/mongod.lock" afterPath="$PROJECT_DIR$/my-app/db/mongod.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/src/components/pages/App.js" afterPath="$PROJECT_DIR$/my-app/src/components/pages/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/src/components/pages/Ticket.js" afterPath="$PROJECT_DIR$/my-app/src/components/pages/Ticket.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app/src/reducers/tickets.js" afterPath="$PROJECT_DIR$/my-app/src/reducers/tickets.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -56,26 +33,16 @@
         <entry file="file://$PROJECT_DIR$/my-app/src/components/elements/AddTicketForm.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+              <caret line="64" column="23" lean-forward="false" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TicketElement.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/components/elements/TicketElement.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="68" column="53" lean-forward="true" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateTicket.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateTicket.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-app/src/components/pages/CreateTicket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="204">
               <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -84,21 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tickets.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/reducers/tickets.js">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/app.js">
+      <file leaf-file-name="getTickets.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/actions/getTickets.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="82" column="53" lean-forward="true" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+            <state relative-caret-position="204">
+              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -107,18 +74,30 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-app/src/components/pages/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="46" column="67" lean-forward="false" selection-start-line="46" selection-start-column="67" selection-end-line="46" selection-end-column="67" />
+            <state relative-caret-position="187">
+              <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TicketElement.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/components/elements/TicketElement.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1173">
+              <caret line="73" column="29" lean-forward="false" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ticket.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Ticket.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-app/src/components/pages/Ticket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="59" lean-forward="false" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+            <state relative-caret-position="145">
+              <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -129,7 +108,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-app/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
+            <state relative-caret-position="204">
               <caret line="28" column="40" lean-forward="false" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
               <folding />
             </state>
@@ -150,6 +129,8 @@
       <find>tr</find>
       <find>class</find>
       <find>var</find>
+      <find>---</find>
+      <find>+++</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -182,17 +163,17 @@
         <option value="$PROJECT_DIR$/my-app/src/components/elements/AddTicketFormCSS.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/elements/AddTicketCSS.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/elements/TicketCSS.js" />
-        <option value="$PROJECT_DIR$/my-app/src/actions/getTickets.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/pages/CreateTicket.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/elements/Menu.js" />
         <option value="$PROJECT_DIR$/my-app/src/index.css" />
-        <option value="$PROJECT_DIR$/my-app/src/components/pages/App.js" />
-        <option value="$PROJECT_DIR$/my-app/src/components/elements/AddTicketForm.js" />
         <option value="$PROJECT_DIR$/my-app/src/index.js" />
-        <option value="$PROJECT_DIR$/my-app/src/components/pages/Ticket.js" />
-        <option value="$PROJECT_DIR$/my-app/src/reducers/tickets.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/elements/TicketElement.js" />
+        <option value="$PROJECT_DIR$/my-app/src/reducers/tickets.js" />
+        <option value="$PROJECT_DIR$/my-app/src/components/elements/AddTicketForm.js" />
+        <option value="$PROJECT_DIR$/my-app/src/components/pages/App.js" />
+        <option value="$PROJECT_DIR$/my-app/src/actions/getTickets.js" />
         <option value="$PROJECT_DIR$/my-app/app.js" />
+        <option value="$PROJECT_DIR$/my-app/src/components/pages/Ticket.js" />
       </list>
     </option>
   </component>
@@ -236,7 +217,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -245,15 +225,33 @@
               <item name="start-react" type="b2602c69:ProjectViewProjectNode" />
               <item name="start-react" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="start-react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="start-react" type="462c0819:PsiDirectoryNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="start-react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="start-react" type="462c0819:PsiDirectoryNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="start-react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="start-react" type="462c0819:PsiDirectoryNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-redux-blog" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
@@ -328,12 +326,14 @@
       <workItem from="1522347851251" duration="1002000" />
       <workItem from="1522438539319" duration="5000" />
       <workItem from="1522479901749" duration="3804000" />
-      <workItem from="1522507248663" duration="5771000" />
+      <workItem from="1522507248663" duration="24323000" />
+      <workItem from="1522563807660" duration="1723000" />
+      <workItem from="1522587838863" duration="5901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199103000" />
+    <option name="totallyTimeSpent" value="225279000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -386,20 +386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/styles/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/taskList.js" />
     <entry file="file://$PROJECT_DIR$/my-app/src/components/home.js" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -433,6 +419,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -541,14 +528,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/actions/getTickets.js" />
+    <entry file="file://$PROJECT_DIR$/package-lock.json" />
     <entry file="file://$PROJECT_DIR$/my-app/node_modules/mongodb/lib/mongo_client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7010">
@@ -581,14 +561,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="80" column="15" lean-forward="false" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/reducers/tickets.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="459">
+          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -596,59 +575,88 @@
     <entry file="file://$PROJECT_DIR$/my-app/src/components/elements/AddTicketForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/pages/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="46" column="67" lean-forward="false" selection-start-line="46" selection-start-column="67" selection-end-line="46" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/pages/Ticket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="59" lean-forward="false" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="28" column="40" lean-forward="false" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/elements/TicketElement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="68" column="53" lean-forward="true" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="82" column="53" lean-forward="true" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+          <caret line="64" column="23" lean-forward="false" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/pages/CreateTicket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="204">
           <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/elements/TicketElement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="73" column="29" lean-forward="false" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/actions/getTickets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="28" column="40" lean-forward="false" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/build/static/js/main.aa7c09bd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26879">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/build/static/js/main.aa7c09bd.js.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/pages/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/pages/Ticket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

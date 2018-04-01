@@ -24,6 +24,10 @@ export default function taskList(state = [], action) {
             return ticket;
         });
     }
+    else if (action.type === 'GET_TICKET_DATA') {
+        console.log(action);
+        return state.filter(ticket => ticket._id === action);
+    }
     else if (action.type === 'DELETE_TICKET') {
         console.log(action.id);
         return state.filter(ticket => ticket._id != action._id)

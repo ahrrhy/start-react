@@ -4,7 +4,6 @@ const path    = require("path");
 const bodyParser = require('body-parser');
 const ObjectID = require('mongodb').ObjectID;
 
-
 app.use(express.static('build'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -67,7 +66,7 @@ const updateDocuments = function(db, id, data, callback) {
     });
 };
 
-function update(res,id, data) {
+function update(res, id, data) {
     connect(function (db, client) {
         updateDocuments(db, id, data, function(result) {
             client.close();
@@ -78,10 +77,8 @@ function update(res,id, data) {
 }
 
 app.post('/favorite', function (req, res) {
-    // console.log(req.body.ticket, 'this is request for update.connection');
-    // console.log({_id: req.body.ticket._id});
     let query = {_id: ObjectID(req.body.ticket._id)};
-    console.log(query);
+    console.log(query, 'this is query');
     update(res, query, {$set: {favorite: !req.body.ticket.favorite}});
 });
 
