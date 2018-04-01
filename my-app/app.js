@@ -45,16 +45,6 @@ app.post('/insert', function(req, res) {
     insert(res, req.body.ticket);
 });
 
-const findDocuments = function(db, callback) {
-    // Get the documents collection
-    const collection = db.collection('tickets');
-    // Find some documents
-    collection.find({}).toArray(function(err, docs) {
-        //console.log(docs, 'checking result from findDocuments');
-        callback(docs);
-    });
-};
-
 const updateDocuments = function(db, id, data, callback) {
     // Get the documents collection
     const collection = db.collection('tickets');
@@ -91,8 +81,41 @@ function find(res) {
     });
 }
 
-app.post('/fetch', function(req, res) {
+function findMy(res) {
+    connect(function (db, client) {
+        findDocumentsMy(db, function(docs) {
+            client.close();
+            res.send(docs);
+        });
+    });
+}
+
+const findDocuments = function(db, callback) {
+    // Get the documents collection
+    const collection = db.collection('tickets');
+    // Find some documents
+    collection.find({}).toArray(function(err, docs) {
+        //console.log(docs, 'checking result from findDocuments');
+        callback(docs);
+    });
+};
+
+const findDocumentsMy = function(db, callback) {
+    // Get the documents collection
+    const collection = db.collection('tickets');
+    // Find some documents
+    collection.find({}).toArray(function(err, docs) {
+        console.log(docs, 'checking result from findDocuments');
+        callback(docs);
+    });
+};
+
+app.get('/fetch', function(req, res) {
     find(res);
+});
+app.get('/tickets/:_id', function(req, res) {
+    console.log('you are here');
+    findMy(res);
 });
 
 app.listen(8010);

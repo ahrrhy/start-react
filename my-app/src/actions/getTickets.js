@@ -1,7 +1,7 @@
 export const getTickets = () => {
     return dispatch => {
         return fetch('/fetch', {
-            method: "POST",
+            method: "GET",
             headers: {'Content-Type': 'application/json'}
         })
             .then((response) => {

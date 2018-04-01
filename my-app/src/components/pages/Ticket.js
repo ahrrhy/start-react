@@ -2,17 +2,16 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 import Menu from '../elements/Menu';
-import {getTickets} from "../../actions/getTickets";
+import {getTicketsData} from "../../actions/getTicketsData";
 
 class Ticket extends Component {
 
-    componentDidMount() {
-        console.log(this.props.location.pathname);
-        if ( this.props.ticket._id === undefined ) {
-            this.props.getTicketData();
-        }
-        else console.log(this.props.ticket._id);
-    }
+    // componentDidMount() {
+    //     console.log(this.props.ticket._id);
+    //     if (this.props === undefined) {
+    //         this.props.getTicketData();
+    //     }
+    // }
 
     render() {
         return (
@@ -34,8 +33,7 @@ export default connect(
     }),
     dispatch => ({
         getTicketData: () => {
-            console.log('this');
-            dispatch(getTickets());
+            dispatch(getTicketsData());
         }
     })
 
