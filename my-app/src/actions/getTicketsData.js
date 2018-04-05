@@ -2,7 +2,9 @@ export const getTicketsData = () => {
     return dispatch => {
         return fetch('/tickets/:_id', {
             method: "GET",
-            headers: {'Content-Type': 'application/json'}
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
             .then((response) => {
                 if(response.status == 200){

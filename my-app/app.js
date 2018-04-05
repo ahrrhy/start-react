@@ -114,7 +114,10 @@ app.get('/fetch', function(req, res) {
     find(res);
 });
 app.get('/tickets/:_id', function(req, res) {
-    console.log('you are here');
+    res.sendFile(path.join(__dirname, './build', 'index.html'));
+
+});
+app.post('/tickets/:_id', function(req, res) {
     findMy(res);
 });
 
