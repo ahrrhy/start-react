@@ -81,31 +81,12 @@ function find(res) {
     });
 }
 
-function findMy(res) {
-    connect(function (db, client) {
-        findDocumentsMy(db, function(docs) {
-            client.close();
-            res.send(docs);
-        });
-    });
-}
-
 const findDocuments = function(db, callback) {
     // Get the documents collection
     const collection = db.collection('tickets');
     // Find some documents
     collection.find({}).toArray(function(err, docs) {
         //console.log(docs, 'checking result from findDocuments');
-        callback(docs);
-    });
-};
-
-const findDocumentsMy = function(db, callback) {
-    // Get the documents collection
-    const collection = db.collection('tickets');
-    // Find some documents
-    collection.find({}).toArray(function(err, docs) {
-        console.log(docs, 'checking result from findDocuments');
         callback(docs);
     });
 };
@@ -117,8 +98,36 @@ app.get('/tickets/:_id', function(req, res) {
     res.sendFile(path.join(__dirname, './build', 'index.html'));
 
 });
+
 app.post('/tickets/:_id', function(req, res) {
-    findMy(res);
+    find(res);
+});
+
+const deleteDocuments = function(db, id, callback) {
+    // Get the documents collection
+    const collection = db.collection('tickets');
+    // Delete some documents
+    collection.deleteOne(id, function(err, result) {
+        //console.log(result, 'this is the result from updateDocuments');
+        //console.log('from updateDocuments');
+        callback(result);
+    });
+};
+
+function deleteOneTicket(res, id) {
+    connect(function (db, client) {
+        deleteDocuments(db, id, function(result) {
+            client.close();
+            //console.log(result, 'this is result from update');
+            res.send(result);
+        });
+    });
+}
+
+app.post('/deleteOne', function(req, res) {
+    let query = {_id: ObjectID(req.body.ticket._id)};
+    console.log(query, 'this is query');
+    deleteOneTicket(res, query);
 });
 
 app.listen(8010);

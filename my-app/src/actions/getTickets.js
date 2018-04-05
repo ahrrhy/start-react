@@ -1,8 +1,10 @@
-export const getTickets = () => {
+export const getTickets = (action) => {
     return dispatch => {
-        return fetch('/fetch', {
+        return fetch(action, {
             method: "GET",
-            headers: {'Content-Type': 'application/json'}
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
             .then((response) => {
                 if(response.status == 200){

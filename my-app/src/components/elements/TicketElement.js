@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { StyleSheet, css } from 'aphrodite';
+import {getTickets} from "../../actions/getTickets";
 
 const styles = StyleSheet.create({
     delete_icon: {
@@ -10,11 +11,14 @@ const styles = StyleSheet.create({
     }
 });
 
+let action = '/fetch';
+
 class TicketElement extends Component {
 
     deleteTicket(target) {
         console.log(target);
         this.props.onDeleteTicket(target);
+        this.props.onGetData();
     }
 
     toggleFavorite(target) {
@@ -42,7 +46,7 @@ class TicketElement extends Component {
                                     <span onClick={ this.toggleFavorite.bind(this, ticket) }><i className="material-icons red-text">favorite</i></span>
 
                                 }
-                                <span  onClick={ this.deleteTicket.bind(this, ticket._id) }><i className="material-icons">delete</i></span>
+                                <span  onClick={ this.deleteTicket.bind(this, ticket)}><i className="material-icons">delete</i></span>
                             </div>
                         </div>
                     </div>
@@ -81,8 +85,26 @@ export default connect(
             };
             dispatch(toggleFavorite());
         },
-        onDeleteTicket: (id) => {
-            dispatch({ type: 'DELETE_TICKET', id });
+        onDeleteTicket: (ticket) => {
+            const deleteOneTicket = () => {
+                return dispatch => {
+                    return fetch('/deleteOne', {
+                        method: "POST",
+                        body: JSON.stringify({ticket: ticket}),
+                        headers: {'Content-Type': 'application/json'}
+                    }).then((response) => {
+                        if (response.status == 200) {
+                            dispatch({ type: 'DELETE_TICKET', payload: ticket });
+                        } else {
+                            dispatch({ type: 'TICKET_ERROR', payload: "deleteTICKET error" })
+                        }
+                    });
+                }
+            };
+            dispatch(deleteOneTicket());
+        },
+        onGetData: () => {
+            dispatch(getTickets(action));
         }
     })
 )(TicketElement);

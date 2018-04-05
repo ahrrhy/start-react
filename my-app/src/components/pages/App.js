@@ -5,6 +5,8 @@ import Menu from '../elements/Menu';
 import TicketElement from '../elements/TicketElement';
 import {getTickets} from '../../actions/getTickets';
 
+let action = '/fetch';
+
 class App extends Component {
 
     componentDidMount() {
@@ -40,7 +42,7 @@ export default connect(
     }),
     dispatch => ({
         onGetTickets: () => {
-            dispatch(getTickets());
+            dispatch(getTickets(action));
         }
     })
 )(App);

@@ -2,8 +2,10 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 import Menu from '../elements/Menu';
-import {getTicketsData} from "../../actions/getTicketsData";
 import {getTickets} from "../../actions/getTickets";
+
+let action = '/ticket/:_id',
+    actionNext = '/fetch';
 
 class Ticket extends Component {
 
@@ -54,10 +56,10 @@ export default connect(
     }),
     dispatch => ({
         onGetTickets: () => {
-            dispatch(getTicketsData());
+            dispatch(getTickets(action));
         },
         onGetData: () => {
-            dispatch(getTickets());
+            dispatch(getTickets(actionNext));
         }
     })
 

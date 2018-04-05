@@ -29,8 +29,8 @@ export default function taskList(state = [], action) {
         return state.filter(ticket => ticket._id === action);
     }
     else if (action.type === 'DELETE_TICKET') {
-        console.log(action.id);
-        return state.filter(ticket => ticket._id != action._id)
+        console.log(action._id);
+        return state.filter(ticket => ticket._id !== action._id)
     }
     return state;
 }
